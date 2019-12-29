@@ -47,16 +47,16 @@
       let regiondropdown = new kintoneUIComponent.Dropdown({items: region_dropdown_options});
       
       /* Reset All Dropdown on space */
-      kintone.app.record.getSpaceElement('space_region').innerHTML = "";
-      kintone.app.record.getSpaceElement('space_prefecture').innerHTML = "";
-      kintone.app.record.getSpaceElement('space_city').innerHTML = "";
+      kintone.app.record.getSpaceElement('space_region_main').innerHTML = "";
+      kintone.app.record.getSpaceElement('space_prefecture_main').innerHTML = "";
+      kintone.app.record.getSpaceElement('space_city_main').innerHTML = "";
       /* Setting Region Dropdown on space */
-      kintone.app.record.getSpaceElement('space_region').appendChild(regionlabel.render());
-      kintone.app.record.getSpaceElement('space_region').appendChild(regiondropdown.render());
+      kintone.app.record.getSpaceElement('space_region_main').appendChild(regionlabel.render());
+      kintone.app.record.getSpaceElement('space_region_main').appendChild(regiondropdown.render());
  
       /* If change Region Dropdown , Insert value '地方名_Main' field . */
       regiondropdown.on('change', function(value_region) {
-        //Get_Main app all records include fields on space_region
+        //Get_Main app all records include fields on space_region_main
         let records_Main_region = kintone.app.record.get();
         
         //console.log(records_Main_region.record);
@@ -106,15 +106,15 @@
       let prefecturedropdown = new kintoneUIComponent.Dropdown({items: prefecture_dropdown_options});
  
       /* Reset Prefecture & city Dropdown on space */
-      kintone.app.record.getSpaceElement('space_prefecture').innerHTML = "";
-      kintone.app.record.getSpaceElement('space_city').innerHTML = "";
+      kintone.app.record.getSpaceElement('space_prefecture_main').innerHTML = "";
+      kintone.app.record.getSpaceElement('space_city_main').innerHTML = "";
       /* Setting Prefecture Dropdown on space */
-      kintone.app.record.getSpaceElement('space_prefecture').appendChild(prefecturelabel.render());
-      kintone.app.record.getSpaceElement('space_prefecture').appendChild(prefecturedropdown.render());
+      kintone.app.record.getSpaceElement('space_prefecture_main').appendChild(prefecturelabel.render());
+      kintone.app.record.getSpaceElement('space_prefecture_main').appendChild(prefecturedropdown.render());
  
       /* If change prefecture Dropdown , Insert value '都道府県名_Main' field . */
       prefecturedropdown.on('change', function(value_prefecture) {
-        //Get_Main app all records include fields on space_prefecture
+        //Get_Main app all records include fields on space_prefecture_main
         let records_Main_prefecture = kintone.app.record.get();
         //console.log(records_Main_prefecture.record);
         //console.log("value",value_prefecture);// This value is selected value .
@@ -165,14 +165,14 @@
       let citydropdown = new kintoneUIComponent.Dropdown({items: city_dropdown_options});
 
       /* Reset City Dropdown on space */
-      kintone.app.record.getSpaceElement('space_city').innerHTML = "";
+      kintone.app.record.getSpaceElement('space_city_main').innerHTML = "";
       /* Setting City Dropdown on space */
-      kintone.app.record.getSpaceElement('space_city').appendChild(citylabel.render());
-      kintone.app.record.getSpaceElement('space_city').appendChild(citydropdown.render());
+      kintone.app.record.getSpaceElement('space_city_main').appendChild(citylabel.render());
+      kintone.app.record.getSpaceElement('space_city_main').appendChild(citydropdown.render());
 
       /* If change city Dropdown , Insert value '市区町村名_Main' field . */
       citydropdown.on('change', function(value_city) {
-        //Get_Main app all records include fields on space_city
+        //Get_Main app all records include fields on space_city_main
         let records_Main_city = kintone.app.record.get();
         //console.log(records_Main_city.record);
         //console.log("value",value_city);// This value is selected value .

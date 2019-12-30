@@ -77,7 +77,7 @@
     });
  
    kintone.events.on('app.record.create.change.地方コード_Main', function(event_region) {
-    /* Success */
+
      /* Get 地方コード_Main field value when 地方コード_Main field change */
      let regioncode_Main = event_region.changes.field;
      //console.log(regioncode_Main.value);
@@ -136,7 +136,7 @@
     });
     
     kintone.events.on('app.record.create.change.都道府県コード_Main', function(event_prefecture) {
-    /* Success */
+
      /* Get 都道府県コード_Main value when 都道府県コード_Main change */
      let prefecturecode_Main = event_prefecture.changes.field;
      //console.log(prefecturecode_Main.value);

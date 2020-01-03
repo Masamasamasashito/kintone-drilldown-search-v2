@@ -111,7 +111,6 @@ https://4649-24.com
             kintone.app.record.set(records_Main_prefecture);
           });
         }, function(error) {
-        /* error */
         console.log(error);
         });
 
@@ -173,7 +172,6 @@ https://4649-24.com
         kintone.app.record.set(records_Main_region);
       });
     }, function(error) {
-      // error
       console.log(error);
     });
  
@@ -226,7 +224,6 @@ https://4649-24.com
       });
  
      }, function(error) {
-       /* error */
        console.log(error);
      });
  
@@ -280,7 +277,6 @@ https://4649-24.com
         
       });
     }, function(error) {
-      /* error */
       console.log(error);
     });
 
